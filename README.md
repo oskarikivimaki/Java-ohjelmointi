@@ -1,1 +1,3 @@
-# Java
+# Java programming
+
+Repo for school class projects
