@@ -14,7 +14,8 @@ public class Main {
         // System.out.println(Obj.rTriangle());
 
         // matr();
-        System.out.println(Arrays.toString(bubbleSort()));
+        // System.out.println(Arrays.toString(bubbleSort()));
+        palindrome();
     }
 
     static double cords(double loc1[], double loc2[]){
@@ -49,13 +50,13 @@ public class Main {
             {0, 1, 1}
         };
 
-        int max = matrix[0][0]; // Start with the first value
+        int max = matrix[0][0];
         int[] awnser = {0, 0};
 
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {
                 if (matrix[row][col] > max) {
-                    max = matrix[row][col]; // Update max if current value is larger
+                    max = matrix[row][col];
                     awnser[0] = row;
                     awnser[1] = col;
                 }
@@ -83,4 +84,19 @@ public class Main {
         return newArray;
     }
 
+    static Boolean palindrome(){
+        String word = "Saippuakauppias";
+
+        char[] pali = word.toCharArray();
+        char[] reverse = {};
+
+        for (int i = pali.length-1; i >= 0; i--){
+            reverse[i] = pali[i];
+        }
+        
+        for(int j = 0; j < reverse.length; j++){
+            System.out.print(reverse[j]);
+        }
+        return true;
+    }
 }
