@@ -4,99 +4,40 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // System.out.println(cords(new double[]{0,0}, new double[]{0,3}));
 
-        // tree();
+        Teh1 teh1 = new Teh1();
+        Teh2 teh2 = new Teh2();
+        Teh3 teh3 = new Teh3();
+        Teh4 teh4 = new Teh4();
+        Teh5 teh5 = new Teh5();
+        Teh6 teh6 = new Teh6();
+        Teh7 teh7 = new Teh7();
+        Teh8 teh8 = new Teh8();
+
+        // 1
+        //System.out.println(teh1.cords(new double[]{0,0}, new double[]{0,3}));
+
+        // 2
+        //teh2.tree();
         
-        // Calc Obj = new Calc();
-        // System.out.println(Obj.circle());
-        // System.out.println(Obj.square());
-        // System.out.println(Obj.rTriangle());
+        // 3
+        //System.out.println(teh3.circle());
+        //System.out.println(teh3.square());
+        //System.out.println(teh3.rTriangle());
 
-        // matr();
-        // System.out.println(Arrays.toString(bubbleSort()));
-        palindrome();
-    }
+        // 4
+        //teh4.matr();
 
-    static double cords(double loc1[], double loc2[]){
-        return Math.sqrt((Math.pow((loc1[0] - loc1[1]), 2)) + (Math.pow((loc2[0] - loc2[1]), 2)));
-    }
+        // 5
+        //System.out.println(Arrays.toString(teh5.bubbleSort()));
 
-    static void tree(){
-        int korkeus = 5;
-        int x = korkeus;
-        int y = -1;
-        for(int i = -1; i < korkeus; i++){
-            charPr(x, ' ', false);
-            charPr(y, '*', true);
-            x--;
-            y = y + 2;
-        }
-    }
+        // 6
+        //System.out.println(teh6.palindrome());
 
-    static void charPr(int count, char symbol, boolean newLine){
-        for(int x = 0; x < count; x++){
-            System.out.print(symbol);
-        }
-        if (newLine) {
-            System.out.println();
-        }
-    }
+        // 7
+        //teh7.fibo();
 
-    static void matr(){
-        int[][] matrix = {
-            {1, 5, 7},
-            {9, 3, 1},
-            {0, 1, 1}
-        };
-
-        int max = matrix[0][0];
-        int[] awnser = {0, 0};
-
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix[row].length; col++) {
-                if (matrix[row][col] > max) {
-                    max = matrix[row][col];
-                    awnser[0] = row;
-                    awnser[1] = col;
-                }
-            }
-        }
-        System.out.println(String.format("[%d, %d]", awnser[0], awnser[1]));
-        
-    }
-
-    static int[] bubbleSort() {
-        int[] ogArray = {8, 3, 2, 7};
-        int[] newArray = ogArray.clone();
-        boolean swapped;
-        do {
-            swapped = false;
-            for (int i = 0; i < newArray.length - 1; i++) {
-                if (newArray[i] > newArray[i + 1]) {
-                    int temp = newArray[i];
-                    newArray[i] = newArray[i + 1];
-                    newArray[i + 1] = temp;
-                    swapped = true;
-                }
-            }
-        } while (swapped);
-        return newArray;
-    }
-
-    static Boolean palindrome(){
-        String word = "Saippuakauppias";
-
-        char[] pali = word.toCharArray();
-        char[] reverse = {};
-
-        for (int i = pali.length-1; i >= 0; i--){
-            reverse[i] = pali[i];
-        }
-        
-        for(int j = 0; j < reverse.length; j++){
-            System.out.print(reverse[j]);
-        }
-        return true;
+        //8
+        teh8.prime();
     }
 }

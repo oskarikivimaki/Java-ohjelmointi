@@ -1,6 +1,6 @@
 package com.example;
 
-public class Calc {
+public class Teh3 {
     public double circle(){
         double radius = 2;
         return Math.PI * Math.pow(radius, 2);
