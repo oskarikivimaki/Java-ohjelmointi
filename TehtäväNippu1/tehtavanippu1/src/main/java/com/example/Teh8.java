@@ -2,19 +2,19 @@ package com.example;
 import java.util.ArrayList;
 
 public class Teh8 {
-    public void prime(){
+    public ArrayList<Integer> prime(){
         ArrayList<Integer> primeNumbers = new ArrayList<>();
 
         int num = 10;
-    
-        for (int i = 2; i <= num / 2; ++i) {
-            if (num % i == 0) {
-                primeNumbers.add(i);
+        
+        for (int i = num/2; i < num; i++) {
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) break;
+
+                if (j == i-1)primeNumbers.add(i);
             }
         }
 
-        for ( int j = 0; j < primeNumbers.size(); j++){
-            System.out.println(primeNumbers.get(j));
-        }
+        return primeNumbers;
     }
 }

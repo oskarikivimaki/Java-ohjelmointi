@@ -38,6 +38,6 @@ public class Main {
         //teh7.fibo();
 
         //8
-        teh8.prime();
+        System.out.println(teh8.prime());
     }
 }
