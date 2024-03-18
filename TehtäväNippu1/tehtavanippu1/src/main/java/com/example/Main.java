@@ -13,6 +13,8 @@ public class Main {
         Teh6 teh6 = new Teh6();
         Teh7 teh7 = new Teh7();
         Teh8 teh8 = new Teh8();
+        Teh9 teh9 = new Teh9();
+        Teh10 teh10 = new Teh10();
 
         // 1
         //System.out.println(teh1.cords(new double[]{0,0}, new double[]{0,3}));
@@ -38,6 +40,12 @@ public class Main {
         //teh7.fibo();
 
         //8
-        System.out.println(teh8.prime());
+        // System.out.println(teh8.prime());
+
+        //9
+        // System.out.println(teh9.time());
+
+        //10
+        System.out.println(teh10.random());
     }
 }
