@@ -1,12 +1,18 @@
 package com.example.Teh14;
 
 public class Pankkitili {
-    String name = "User";
-    String accountAdress = "FI39 ...";
-    int cents = 0;
-    public String accountData(){
-        
+    public String name;
+    public final String accountAdress;
+    public int balance;
 
-        return "";
+    public Pankkitili(String name, String accountAdress, int cents) {
+        this.name = name;
+        this.accountAdress = accountAdress;
+        this.balance = cents;
+    }
+    
+
+    protected String accountData(){
+        return "Name: " + this.name + ", Account Address: " + this.accountAdress + ", Balance: " + this.balance;
     }
 }
