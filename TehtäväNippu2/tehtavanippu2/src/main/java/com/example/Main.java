@@ -22,6 +22,22 @@ public class Main {
         //14
         Pankkitili pankkitili = new Pankkitili("John Doe", "12345", 1000);
         bank.addAccount(pankkitili);
-        System.out.println(bank.accounts);
+        Pankkitili pankkitili2 = new Pankkitili("Moe Lester", "321", 1000);
+        bank.addAccount(pankkitili2);
+
+
+        System.out.println("Number of accounts " + bank.accounts.size());
+        bank.accountCheck("12345");
+        bank.accountCheck("321");
+
+        bank.accountDelete("321");
+
+        pankkitili.addMoney(100);
+        bank.accountCheck("12345");
+
+        pankkitili.withdraw(99);
+        bank.accountCheck("12345");
+
+        System.out.println("Number of accounts " + bank.accounts.size());
     }
 }

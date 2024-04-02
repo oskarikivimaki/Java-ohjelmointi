@@ -11,8 +11,19 @@ public class Pankkitili {
         this.balance = cents;
     }
     
-
     protected String accountData(){
         return "Name: " + this.name + ", Account Address: " + this.accountAdress + ", Balance: " + this.balance;
+    }
+
+    public void addMoney(int amount){
+        balance += amount;
+    }
+
+    public void withdraw(int amount){
+        balance -= amount;
+    }
+
+    public void checkBalance(){
+        
     }
 }
