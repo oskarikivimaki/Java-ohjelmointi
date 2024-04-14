@@ -24,6 +24,6 @@ public class Pankkitili {
     }
 
     public void checkBalance(){
-        
+        System.out.println("Balance: " + balance);
     }
 }
